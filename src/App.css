@@ -6,3 +6,11 @@
 .btn:focus {
   outline: none !important;
 }
+
+.btn-download,
+.btn-download:focus {
+  text-decoration: none !important;
+  color: #fff !important;
+  overflow: none !important;
+  box-shadow: none !important;
+}

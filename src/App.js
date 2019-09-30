@@ -9,8 +9,9 @@ function App() {
   const [imageURL, setImageURL] = useState(null);
   const sigCanvas = useRef({});
   const clear = () => sigCanvas.current.clear();
-  const save = () =>
+  const save = () => {
     setImageURL(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
+  };
 
   return (
     <div className="App">
@@ -54,6 +55,16 @@ function App() {
           }}
         />
       ) : null}
+
+      <button className="btn btn-info btn-download shadow-none mt-2">
+        <a
+          href={imageURL}
+          className="btn btn-download"
+          download="new-signature.png"
+        >
+          Download
+        </a>
+      </button>
     </div>
   );
 }
